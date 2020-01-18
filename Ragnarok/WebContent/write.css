@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+/*navigation*/
+nav {
+	width: 100%;
+	height: 300px;
+}
+
+.top {
+	width: 70%;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.top ul {
+	display: flex;
+	justify-content: flex-end;
+	transform: translateY(-30px);
+	list-style: none;
+}
+
+.top ul li {
+	border-right: 1px solid gray;
+	margin-right: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.topLogo {
+	width: 10%;
+	height: 40px;
+	background-image: url(images/logo.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.mainNav {
+	width: 70%;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.mainNav ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+}
+
+.mainNav ul li {
+	cursor: pointer;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mainNav ul li:hover {
+	cursor: pointer;
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #6b6bff;
+	font-weight: bold;
+	border-bottom: 3px solid #6b6bff;
+	transition: 0.6s all;
+}
+
+.logo {
+	width: 20%;
+	height: 80px;
+	background-image: url(images/0000127691_001_20180614163639577.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.navImg {
+	width: 100%;
+	height: 280px;
+	margin: 0 auto;
+	background-image: url(images/39.jpg);
+	background-size: 700px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #37709a;
+}
+
+
+/*section*/
+table{
+    border: 1px solid #d3d3d3;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.first{
+    background-color: #f4f4f4;
+}
+
+h2{
+    width: 50%;
+    margin: 0 auto;
+}
+
+table, h2{
+    transform: translateY(120px);
+}
+
+.cTitle{
+     width: 50px;
+     border-right: 1px solid #a5a5a5;
+        
+}
+.cTitleL{
+    position: relative;
+    width: 50%;
+}
+
+.btn{
+    width: 70px;
+    height: 49px;
+}
+
+.cWrite{
+    width: 60%;
+    height: 300px;
+}
+
+.userID{
+	display: none;
+}
