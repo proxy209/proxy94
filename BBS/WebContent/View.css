@@ -1,0 +1,49 @@
+.container{
+    position: absolute;
+    margin: 1%;
+    padding: 20%;
+    width: 60%;
+    right: 20%;
+    top: 10%;
+    bottom: 10%;
+    border: 5px solid black;
+}
+.container h1{
+    position: absolute;
+    top: 0%;
+    right: 45%;
+    margin: 1%;
+    
+}
+.table{
+    position: absolute;
+    margin: 1px;
+    top: 10%;
+    left: 10%;
+    right: 10;
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+}
+
+.table th{
+   width: 300px;
+    height: 35px;
+}
+
+.boardbtn1{
+    position:absolute;
+    right:10%;
+    top:92%;
+}
+.boardbtn2{
+    position:absolute;
+    left:10%;
+    top:92%;
+}
+
+.boardbtn3{
+    position:absolute;
+    left:16%;
+    top:92%;
+}

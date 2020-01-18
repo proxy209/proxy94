@@ -1,0 +1,76 @@
+body{
+    font-family: inherit;
+    color: #fff;
+    background: url(logback.jpg);
+    background-size:auto;
+    width: 100%;
+}
+
+
+
+.signin{
+    position: absolute;
+    background: rgba(44, 62, 80, 0.7);
+    padding: auto;
+    width: 310px;
+    margin: auto;
+    height: 430px;
+    left: 40%;
+    top: 27%;
+}
+
+form{
+    position: absolute;
+    text-align: center;
+    top: 5%;
+}
+
+input{
+    width: 240px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-family: inherit;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: #fff;
+}
+
+
+input[type=submit]{
+    margin: 20px;
+    border: none;
+    width: 150px;
+    background: white;
+    color: #000;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    color: #fff;
+    background-color: black;
+}
+
+h2{
+    color: white;
+}
+a{
+    color: black;
+    text-decoration: blink;
+    padding: 5px;
+}
+a:hover{
+    color: crimson;
+}
+
+::placeholder{
+    color: aliceblue;
+    opacity: 0.8;
+}

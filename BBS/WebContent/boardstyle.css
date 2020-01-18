@@ -1,0 +1,49 @@
+.container{
+    position: absolute;
+    margin: 1%;
+    padding: 20%;
+    width: 60%;
+    right: 20%;
+    top: 10%;
+    bottom: 10%;
+    border: 7px solid black;
+}
+.container h1{
+    position: absolute;
+    top: 0%;
+    right: 45%;
+    margin: 1%;
+    
+}
+.table{
+   position: absolute;
+    margin: 1px;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    border: 4px solid black;
+}
+
+.table th{
+   width: 300px;
+}
+
+
+.pagebtn1{
+    position:absolute;
+    top:90%;
+    left:10%;
+}
+.pagebtn2{
+    position:absolute;
+    top:90%;
+    left:16%;
+}
+
+
+input[type=submit]{
+    position:absolute;
+    top:90%;
+    right:10%;
+}

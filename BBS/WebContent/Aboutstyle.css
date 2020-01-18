@@ -1,0 +1,22 @@
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    font-size: 20px;
+    padding: 25px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.parallax{
+    background: url('aboutimg.jpg') no-repeat center;
+    background-size: 1024px 728px;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.parallax1{
+    background: url('aboutimg2.jpg') no-repeat center;
+    background-size: 1024px 728px;
+    background-attachment: fixed;
+    height: 500px;
+}
