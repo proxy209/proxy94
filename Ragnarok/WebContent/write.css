@@ -91,47 +91,47 @@ nav {
 	background-color: #37709a;
 }
 
-
 /*section*/
-table{
-    border: 1px solid #d3d3d3;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-.first{
-    background-color: #f4f4f4;
+table {
+	border: 1px solid #d3d3d3;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
 }
 
-h2{
-    width: 50%;
-    margin: 0 auto;
+.first {
+	background-color: #f4f4f4;
 }
 
-table, h2{
-    transform: translateY(120px);
+h2 {
+	width: 50%;
+	margin: 0 auto;
 }
 
-.cTitle{
-     width: 50px;
-     border-right: 1px solid #a5a5a5;
-        
-}
-.cTitleL{
-    position: relative;
-    width: 50%;
+table, h2 {
+	transform: translateY(120px);
 }
 
-.btn{
-    width: 70px;
-    height: 49px;
+.cTitle {
+	width: 50px;
+	border-right: 1px solid #a5a5a5;
 }
 
-.cWrite{
-    width: 60%;
-    height: 300px;
+.cTitleL {
+	position: relative;
+	width: 50%;
 }
 
-.userID{
+.btn {
+	width: 70px;
+	height: 49px;
+}
+
+.cWrite {
+	width: 60%;
+	height: 300px;
+}
+
+.userID {
 	display: none;
 }

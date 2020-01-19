@@ -67,7 +67,8 @@
 			%>
 			<tr>
 				<td class="cNumL"><%=list.get(i).getBbsID()%></td>
-				<td class="cTitleL"><%=list.get(i).getBbsTitle()%></td>
+				<td class="cTitleL"><a
+					href="view.jsp?bbsID=<%= list.get(i).getBbsID() %>"><%=list.get(i).getBbsTitle()%></a></td>
 				<td class="cWriterL"><%=list.get(i).getUserID()%></td>
 				<td class="cDateL"><%=list.get(i).getBbsDate()%></td>
 			</tr>

@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ page import="java.io.PrintWriter"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="bbs.BbsDAO"%>
+<%@ page import="bbs.BbsDTO"%>
+<%@ page import="reple.RepleDAO"%>
+<%@ page import="reple.RepleDTO"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,6 +23,39 @@
 		String error = (String) request.getAttribute("Error");
 		if (session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");
+		}
+		System.out.println("Error Code : "+error);
+		
+	
+		int bbsID = 0;
+		if(request.getParameter("bbsID") != null){
+			bbsID = Integer.parseInt(request.getParameter("bbsID"));
+		}
+		
+		int pageNumber = 1;
+		if (request.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		}
+		
+		BbsDTO dto = new BbsDAO().getBbs(bbsID);
+		
+		if(error != null && error.equals("0") ){
+			   PrintWriter script = response.getWriter();
+		 	   script.println("<script>");
+		 	   script.println("alert('로그인 후 이용이 가능합니다.')");
+		 	   script.println("location.href='main.jsp'");
+		 	   script.println("</script>");
+		} else if(error != null && error.equals("1") ){
+			 PrintWriter script = response.getWriter();
+		 	   script.println("<script>");
+		 	   script.println("alert('내용을 입력해주세요.')");
+		 	   script.println("history.back()");
+		 	   script.println("</script>");
+		} else if(error != null && error.equals("2") ){
+			 PrintWriter script = response.getWriter();
+		 	   script.println("<script>");
+		 	   script.println("history.back()");
+		 	   script.println("</script>");
 		}
 	%>
 	<nav>
@@ -51,27 +89,30 @@
 		<table class="first">
 			<tr>
 				<td class="cTitle">제목</td>
-				<td class="cTitleL">여기에 제목 view</td>
+				<td class="cTitleL"><%=dto.getBbsTitle() %></td>
 			</tr>
 			<table>
 				<tr>
 					<td class="cWriter">작성자</td>
-					<td class="cWriterL">proxy94</td>
+					<td class="cWriterL"><%=dto.getUserID() %></td>
 					<td class="cDate">등록일</td>
-					<td class="cDate">2019-01-12</td>
+					<td class="cDate"><%=dto.getBbsDate() %></td>
 				</tr>
 			</table>
 			<table>
 				<tr>
-					<td class="cContent">여기에 내용</td>
+					<td class="cContent"><%=dto.getBbsContent() %></td>
 				</tr>
 			</table>
 			<table>
 				<tr>
 					<td>
-						<form method="post" action="reple" class="reple">
-							<input type="text" name="reple" placeholder="로그인 후 이용 가능합니다."
-								class="iC">
+						<form method="post" action="reple.go" class="reple">
+							<input type="text" name="repleContent"
+								placeholder="로그인 후 이용 가능합니다." class="iC"> <input
+								type="text" name="bbsID" value="<%=bbsID %>" class="none">
+							<input type="text" name="userID" value="<%=userID %>"
+								class="none">
 							<button type="submit" value="등록" class="btn">등록</button>
 						</form>
 					</td>
@@ -80,12 +121,24 @@
 		</table>
 
 		<table class="retable">
+		<%
+				RepleDAO repleDAO = new RepleDAO();
+				ArrayList<RepleDTO> list = repleDAO.getList(pageNumber, bbsID);
+				for (int i = 0; i < list.size(); i++) {
+					%>
+				
 			<tr>
-				<td class="reID">아이디</td>
-				<td class="reDate">날짜</td>
+				<td class="reID"><%=list.get(i).getUserID() %></td>
+				<td class="reDate"><%=list.get(i).getRepleDATE() %></td>
 			</tr>
-			<td><div class="reContent">여기에 댓글 내용</div></td>
+			<tr>
+				<td><div class="reContent"><%=list.get(i).getRepleContent() %></div></td>
+			<tr>
+			<%
+				}
+			%>
 		</table>
+		<button class="listbtn" type="button" onclick="history.back()">목록</button>
 	</section>
 </body>
 </html>

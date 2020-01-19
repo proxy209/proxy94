@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvc.command.CommandHandler;
 import mvc.command.LogOutCommand;
 import mvc.command.LoginCommand;
+import mvc.command.RepleCommand;
 import mvc.command.SignCommand;
 import mvc.command.writeCommand;
 
@@ -65,6 +66,9 @@ public class ControllerHandler extends HttpServlet {
 			command.process(request, response);
 		} else if(com.contentEquals("/write.go")) {
 			command = new writeCommand();
+			command.process(request, response);
+		} else if(com.contentEquals("/reple.go")) {
+			command = new RepleCommand();
 			command.process(request, response);
 		}
 			

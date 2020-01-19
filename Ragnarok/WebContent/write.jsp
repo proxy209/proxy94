@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <%@ page import="java.io.PrintWriter"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -68,30 +68,33 @@
 		<div class="navImg"></div>
 	</nav>
 	<section>
-        <h2>커뮤니티</h2>
-        <form method="post" action="write.go">
-		<table class="first">
-            <tr>
-                 <td class="cTitle">제목</td>
-                 <td><input type="text" value=<%=userID %> class="userID" name="userID">
-                 <td><input type="text" name="bbsTitle" placeholder="제목을 입력하세요." class="cTitleL"></td>
-            </tr>
+		<h2>커뮤니티</h2>
+		<form method="post" action="write.go">
+			<table class="first">
+				<tr>
+					<td class="cTitle">제목</td>
+					<td><input type="text" value=<%=userID %> class="userID"
+						name="userID">
+					<td><input type="text" name="bbsTitle"
+						placeholder="제목을 입력하세요." class="cTitleL"></td>
+				</tr>
 
-            <table>
-                <tr>
-                  <td class="cContent"><input type="text" name="bbsContent" placeholder="내용을 입력하세요" class="cWrite"></td>
-                </tr>
-            </table>
-            <table>
-            <tr>
-            <td>
-                <button type="submit" value="등록" class="btn">등록</button>
-                
-            </td>
-            </tr>
-                </table>
-        </table>
-            </form>
+				<table>
+					<tr>
+						<td class="cContent"><input type="text" name="bbsContent"
+							placeholder="내용을 입력하세요" class="cWrite"></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<button type="submit" value="등록" class="btn">등록</button>
+
+						</td>
+					</tr>
+				</table>
+			</table>
+		</form>
 	</section>
 </body>
 </html>

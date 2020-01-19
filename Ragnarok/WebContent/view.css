@@ -92,69 +92,83 @@ nav {
 }
 
 /*section*/
-table{
-    border: 1px solid #d3d3d3;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-.first{
-    background-color: #f4f4f4;
+table {
+	border: 1px solid #d3d3d3;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
 }
 
-h2{
-    width: 50%;
-    margin: 0 auto;
+.first {
+	background-color: #f4f4f4;
 }
 
-table, h2{
-    transform: translateY(120px);
+h2 {
+	width: 50%;
+	margin: 0 auto;
 }
 
-.cTitle{
-     width: 50px;
-     border-right: 1px solid #a5a5a5;
-        
-}
-.cWriter{
-    width: 70px;
-     border-right: 1px solid #a5a5a5;
-}
-.cWriterL{
-   text-align:left;
+table, h2 {
+	transform: translateY(120px);
 }
 
-.cDate{
-    width: 90px;
+.cTitle {
+	width: 50px;
+	border-right: 1px solid #a5a5a5;
 }
 
-.cContent{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: auto;
-    height: auto;
-    text-align: left;
+.cWriter {
+	width: 70px;
+	border-right: 1px solid #a5a5a5;
 }
 
-.iC{
-    width: 90%;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-}
-.btn{
-    width: 40px;
-    height: 49px;
-    transform: translateY(17px);
+.cWriterL {
+	text-align: left;
 }
 
-.retable{
-    text-align: left;
+.cDate {
+	width: 90px;
 }
 
-.reID{
-    width: 100px;
+.cContent {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: auto;
+	height: auto;
+	text-align: left;
 }
 
-.reContent{
-    width: 500%;
+.iC {
+	width: 90%;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+.btn {
+	width: 40px;
+	height: 49px;
+	transform: translateY(17px);
+}
+
+.retable {
+	text-align: left;
+}
+
+.reID {
+	width: 100px;
+}
+
+.reContent {
+	width: 500%;
+}
+
+.listbtn {
+	position: relative;
+	width: 40px;
+	top: 130px;
+	left: 71%;
+}
+
+.none {
+	display: none;
 }
