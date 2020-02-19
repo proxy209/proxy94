@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a{
+   text-decoration: none;
+    color: black;
+}
+
+body{
+    background-image: url(toy-car-3435890_1920.jpg);
+}
+nav{
+    margin-bottom: 50px;
+    background-color: #ffebef;
+    border-bottom: 1px solid #bababa;
+}
+.navigation{
+    display: flex;
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #ffebef;
+}
+.navigation ul li{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation ul li:hover{
+    font-size: 16px;
+    font-weight: bold;
+}
+.logo img{
+    position: relative;
+    width: 50px;
+    left: 70px;
+}
+.navigation ul{
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login{
+    position: relative;
+    top: 15px;
+    right: 30px;
+    font-size: 14px;
+}
+.join{
+    position: relative;
+    top: 15px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.slide{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70px;
+    display: flex;
+    overflow: hidden;
+}
+.slide img{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-left: 400px;
+    transition: 0.6s all;
+}
+
+.fas{
+    position: relative;
+   font-size: 50px;
+   cursor: pointer;
+    top: 200px;
+}
+
+.fa-angle-left{
+    left: 200px;
+}
+.fa-angle-right{
+    left: 1000px;
+}
+
+.board{
+    position: relative;
+    border: 1px solid black;
+    width: 1200px;
+    height: 155px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 93px;
+}
+
+footer{   
+    width: 100%;
+    display: flex;
+    background-color: rgba(74, 74, 74, 0.88);
+}
+
+.foot{
+    width: 1200px;
+    height: 150px;
+    background-color: rgba(74, 74, 74, 0);
+    margin: 0 auto;
+}
+.foot p{
+    position: relative;
+    width: 350px;
+    top: 10px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+.best,
+.new,
+.special{
+    border: 1px solid green;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.11);
+}
+.best p,
+.new p,
+.special p{
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+}
+.best a,
+.new a,
+.special a{
+    position: relative;
+    left: 340px;
+    font-size: 14px;
+    color: grey;
+    font-weight: bold;
+}
+
+.best a:hover,
+.new a:hover,
+.special a:hover{
+    color: black;
+    transition: 0.6s all;
+}
+
+#map{
+    position: relative;
+    width: 200px;
+    height: 120px;
+    right: 500px;
+    opacity: 0.9;
+    top: 15px;
+}
