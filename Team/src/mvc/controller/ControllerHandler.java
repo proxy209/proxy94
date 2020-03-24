@@ -9,12 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.command.CommandHandler;
+import mvc.command.LikeCommand;
 import mvc.command.LogOutCommand;
 import mvc.command.LoginCommand;
 import mvc.command.RepleCommand;
 import mvc.command.SignCommand;
+import mvc.command.deleteCommand;
 import mvc.command.mailCommand;
 import mvc.command.writeCommand;
+import mvc.command.writeReviseCommand;
 
 @WebServlet("*.go")
 public class ControllerHandler extends HttpServlet {
@@ -75,7 +78,13 @@ public class ControllerHandler extends HttpServlet {
 			command = new mailCommand();
 			command.process(request, response);
 		} else if (com.contentEquals("/like.go")) {
-			command = new mailCommand();
+			command = new LikeCommand();
+			command.process(request, response);
+		} else if (com.contentEquals("/writeRevise.go")) {
+			command = new writeReviseCommand();
+			command.process(request, response);
+		} else if (com.contentEquals("/delete.go")) {
+			command = new deleteCommand();
 			command.process(request, response);
 	}
 	}

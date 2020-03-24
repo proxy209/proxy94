@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url(images/toy.jpg);
+}
+
 li {
 	list-style: none;
 }
@@ -27,14 +31,15 @@ nav {
 	background-color: #ffebef;
 }
 
-.navigation ul li {
+.navigation ul li a {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.navigation ul li:hover {
+.navigation ul li a:hover {
 	font-size: 16px;
 	font-weight: bold;
+	color: orange;
 }
 
 .logo img {
@@ -107,6 +112,10 @@ section {
 	font-weight: bold;
 }
 
+.bContents a:hover {
+	color: orange;
+}
+
 .writeBtn {
 	width: 1200px;
 	position: relative;
@@ -131,6 +140,16 @@ section {
 	border-top: 2px solid rgba(114, 114, 114, 0.25);
 	border-top: 2px solid rgba(114, 114, 114, 0.25);
 	height: 30px;
+}
+
+.pageCount {
+	width: 600px;
+	display: flex;
+	margin: 0 auto;
+}
+
+.pageCount a {
+	margin-right: 10px;
 }
 
 footer {

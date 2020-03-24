@@ -4,6 +4,9 @@
 <%
 	request.setCharacterEncoding("utf-8");
 %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="bbs.bbsDAO"%>
+<%@page import="bbs.bbsDTO"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,12 +21,16 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 <script type="text/javascript" src="js/main.js"></script>
 </head>
-<body>
+<body style="background-image: url(images/toy.jpg)">
 	<%
 		String userID = null;
 		String error = (String) request.getAttribute("Error");
 		if (session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");
+		}
+		int pageNumber = 1;
+		if (request.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 		}
 
 		if (userID == null) {
@@ -37,7 +44,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -55,21 +62,26 @@
 				src="images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20(1).jpg">
 		</div>
 
-		<div class="board">
+		<%-- <div class="board">
 			<div class="best">
 				<p>베스트</p>
-				<a href="#">더 보기</a>
+				<a href="board.jsp" class="more">더 보기</a>
 				<ul>
-					<li>1.게시글</li>
-					<li>2.게시글</li>
-					<li>3.게시글</li>
-					<li>4.게시글</li>
-					<li>5.게시글</li>
+					<%
+						bbsDAO bestDAO = new bbsDAO();
+							ArrayList<bbsDTO> bestList = bestDAO.getbLike(pageNumber);
+							for (int i = 0; i < bestList.size(); i++) {
+					%>
+					<li><a href="view.jsp?bID=<%=bestList.get(i).getbID()%>"><%=i + 1%>.
+							<%=bestList.get(i).getbTitle()%></a></li>
+					<%
+						}
+					%>
 				</ul>
 			</div>
 			<div class="new">
 				<p>최신</p>
-				<a href="#">더 보기</a>
+				<a href="#" class="more">더 보기</a>
 				<ul>
 					<li>1.게시글</li>
 					<li>2.게시글</li>
@@ -80,7 +92,7 @@
 			</div>
 			<div class="special">
 				<p>특별혜택</p>
-				<a href="#">더 보기</a>
+				<a href="#" class="more">더 보기</a>
 				<ul>
 					<li>1.게시글</li>
 					<li>2.게시글</li>
@@ -89,7 +101,7 @@
 					<li>5.게시글</li>
 				</ul>
 			</div>
-		</div>
+		</div> --%>
 	</section>
 
 	<footer>
@@ -150,7 +162,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -171,21 +183,26 @@
 				src="images/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20(1).jpg">
 		</div>
 
-		<div class="board">
+		<%-- 	<div class="board">
 			<div class="best">
 				<p>베스트</p>
-				<a href="#">더 보기</a>
+				<a href="board.jsp" class="more">더 보기</a>
 				<ul>
-					<li>1.게시글</li>
-					<li>2.게시글</li>
-					<li>3.게시글</li>
-					<li>4.게시글</li>
-					<li>5.게시글</li>
+					<%
+						bbsDAO bestDAO = new bbsDAO();
+							ArrayList<bbsDTO> bestList = bestDAO.getbLike(pageNumber);
+							for (int i = 0; i < bestList.size(); i++) {
+					%>
+					<li><a href="view.jsp?bID=<%=bestList.get(i).getbID()%>"><%=i + 1%>.
+							<%=bestList.get(i).getbTitle()%></a></li>
+					<%
+						}
+					%>
 				</ul>
 			</div>
 			<div class="new">
 				<p>최신</p>
-				<a href="#">더 보기</a>
+				<a href="#" class="more">더 보기</a>
 				<ul>
 					<li>1.게시글</li>
 					<li>2.게시글</li>
@@ -196,7 +213,7 @@
 			</div>
 			<div class="special">
 				<p>특별혜택</p>
-				<a href="#">더 보기</a>
+				<a href="#" class="more">더 보기</a>
 				<ul>
 					<li>1.게시글</li>
 					<li>2.게시글</li>
@@ -205,7 +222,7 @@
 					<li>5.게시글</li>
 				</ul>
 			</div>
-		</div>
+		</div> --%>
 	</section>
 
 	<footer>

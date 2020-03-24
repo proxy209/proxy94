@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url(images/toy.jpg);
+}
+
 li {
 	list-style: none;
 }
@@ -11,10 +15,6 @@ li {
 a {
 	text-decoration: none;
 	color: black;
-}
-
-body {
-	background-image: url(images/toy-car-3435890_1920.jpg);
 }
 
 nav {
@@ -31,14 +31,15 @@ nav {
 	background-color: #ffebef;
 }
 
-.navigation ul li {
+.navigation ul li a {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.navigation ul li:hover {
+.navigation ul li a:hover {
 	font-size: 16px;
 	font-weight: bold;
+	color: orange;
 }
 
 .logo img {
@@ -117,6 +118,7 @@ footer {
 	width: 100%;
 	display: flex;
 	background-color: rgba(74, 74, 74, 0.88);
+	margin-top:318px;
 }
 
 .foot {
@@ -151,7 +153,7 @@ footer {
 	border-bottom: 1px solid grey;
 }
 
-.best a, .new a, .special a {
+.best .more, .new .more, .special .more {
 	position: relative;
 	left: 340px;
 	font-size: 14px;
@@ -159,9 +161,17 @@ footer {
 	font-weight: bold;
 }
 
-.best a:hover, .new a:hover, .special a:hover {
+.best .more:hover, .new .more:hover, .special .more:hover {
 	color: black;
 	transition: 0.6s all;
+}
+
+.best ul li a {
+	font-size: 15px;
+}
+
+.best ul li a:hover {
+	color: orange;
 }
 
 #map {

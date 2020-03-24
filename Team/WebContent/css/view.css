@@ -27,14 +27,15 @@ nav {
 	background-color: #ffebef;
 }
 
-.navigation ul li {
+.navigation ul li a {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.navigation ul li:hover {
+.navigation ul li a:hover {
 	font-size: 16px;
 	font-weight: bold;
+	color: orange;
 }
 
 .logo img {
@@ -74,7 +75,7 @@ nav {
 
 section {
 	position: relative;
-	height: 800px;
+	height: 1200px;
 	margin-bottom: 100px;
 }
 
@@ -98,6 +99,17 @@ section {
 .content {
 	margin-top: 20px;
 	margin-bottom: 90px;
+}
+
+.reviseBtn {
+	position: absolute;
+	border: 1px solid red;
+	right: 50px;
+}
+
+.delete {
+	position: absolute;
+	right: 0;
 }
 
 .like {

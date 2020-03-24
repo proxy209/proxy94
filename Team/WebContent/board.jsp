@@ -6,6 +6,8 @@
 %>
 <%@ page import="bbs.bbsDAO"%>
 <%@ page import="bbs.bbsDTO"%>
+<%@ page import="like.likeDAO"%>
+<%@ page import="like.likeDTO"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -23,11 +25,11 @@
 </head>
 <body>
 	<%
-	int pageNumber = 1;
-	if (request.getParameter("pageNumber") != null) {
-		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-	}
-	
+		int pageNumber = 1;
+		if (request.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		}
+
 		String userID = null;
 		String error = (String) request.getAttribute("Error");
 		if (session.getAttribute("userID") != null) {
@@ -45,7 +47,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -68,26 +70,65 @@
 			</tr>
 		</table>
 		<%
-		bbsDAO dao = new bbsDAO();
-		bbsDTO dto = new bbsDTO();
-		ArrayList<bbsDTO> list = dao.getList(pageNumber);
-		for(int i=0; i<list.size(); i++){
-	%>
+			int like = 0;
+				bbsDAO dao = new bbsDAO();
+				bbsDTO dto = new bbsDTO();
+				likeDAO Ldao = new likeDAO();
+				likeDTO Ldto = new likeDTO();
+				int array[][];
+				ArrayList<likeDTO> likeList = Ldao.getbLike();
+				ArrayList<bbsDTO> list = dao.getList(pageNumber);
+				for (int i = 0; i < list.size(); i++) {
+		%>
 		<table class="bContents">
 			<tr>
-				<td style="width: 80px;"><%=list.get(i).getbID() %></td>
+				<td style="width: 80px;"><%=list.get(i).getbID()%></td>
 				<td style="width: 800px;"><a
-					href="view.jsp?bID=<%=list.get(i).getbID() %>"><%=list.get(i).getbTitle() %></a></td>
-				<td style="width: 100px;"><%=list.get(i).getUserID() %></td>
-				<td style="width: 100px;"><%=list.get(i).getbDate() %></td>
-				<td style="width: 80px;"><%=list.get(i).getbLike() %></td>
+					href="view.jsp?bID=<%=list.get(i).getbID()%>"><%=list.get(i).getbTitle()%></a></td>
+				<td style="width: 100px;"><%=list.get(i).getUserID()%></td>
+				<td style="width: 100px;"><%=list.get(i).getbDate()%></td>
+				<%
+					System.out.println(list.get(i).getbID());
+							for (int j = 0; j < likeList.size(); j++) {
+								if (list.get(i).getbID() == likeList.get(j).getbID()) {
+									like += likeList.get(j).getbLike();
+									System.out.println(">>>>>>" + like);
+				%>
+
+				<%
+					}
+
+							}
+				%>
+				<td style="width: 80px;"><%=like%></td>
+				<%
+					like = 0;
+				%>
 			</tr>
 		</table>
 		<%
-		}
+			}
 		%>
+
 		<div class="writeBtn">
 			<button onclick="location.href='write.jsp'" value="글쓰기">글쓰기</button>
+		</div>
+
+		<div class="pageCount">
+			<%
+				int a = 0;
+					int count = dao.count() + 1;
+					int de = (int) Math.ceil((double) count / 10);
+					System.out.println(">>>>>>>count = " + count);
+					System.out.println(">>>>>>>de = " + de);
+					for (int j = 0; j < de; j++) {
+			%>
+
+			<a href="board.jsp?pageNumber=<%=j + 1%>"><%=j + 1%></a>
+
+			<%
+				}
+			%>
 		</div>
 	</section>
 
@@ -151,7 +192,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -179,27 +220,63 @@
 		</table>
 
 		<%
-		bbsDAO dao = new bbsDAO();
-		bbsDTO dto = new bbsDTO();
-		ArrayList<bbsDTO> list = dao.getList(pageNumber);
-		for(int i=0; i<list.size(); i++){
-	%>
+			int like = 0;
+				bbsDAO dao = new bbsDAO();
+				bbsDTO dto = new bbsDTO();
+				likeDAO Ldao = new likeDAO();
+				likeDTO Ldto = new likeDTO();
+				int array[][];
+				ArrayList<likeDTO> likeList = Ldao.getbLike();
+				ArrayList<bbsDTO> list = dao.getList(pageNumber);
+				for (int i = 0; i < list.size(); i++) {
+		%>
 		<table class="bContents">
 			<tr>
-				<td style="width: 80px;"><%=list.get(i).getbID() %></td>
+				<td style="width: 80px;"><%=list.get(i).getbID()%></td>
 				<td style="width: 800px;"><a
-					href="view.jsp?bID=<%=list.get(i).getbID() %>"><%=list.get(i).getbTitle() %></a></td>
-				<td style="width: 100px;"><%=list.get(i).getUserID() %></td>
-				<td style="width: 100px;"><%=list.get(i).getbDate() %></td>
-				<td style="width: 80px;"></td>
-				<td style="width: 80px;"><%=list.get(i).getbLike() %></td>
+					href="view.jsp?bID=<%=list.get(i).getbID()%>"><%=list.get(i).getbTitle()%></a></td>
+				<td style="width: 100px;"><%=list.get(i).getUserID()%></td>
+				<td style="width: 100px;"><%=list.get(i).getbDate()%></td>
+				<%
+					System.out.println(list.get(i).getbID());
+							for (int j = 0; j < likeList.size(); j++) {
+								if (list.get(i).getbID() == likeList.get(j).getbID()) {
+									like += likeList.get(j).getbLike();
+									System.out.println(">>>>>>" + like);
+				%>
+
+				<%
+					}
+
+							}
+				%>
+				<td style="width: 80px;"><%=like%></td>
+				<%
+					like = 0;
+				%>
 			</tr>
 		</table>
 		<%
-		}
+			}
 		%>
 		<div class="writeBtn">
 			<button onclick="location.href='write.jsp'" value="글쓰기">글쓰기</button>
+		</div>
+		<div class="pageCount">
+			<%
+				int a = 0;
+					int count = dao.count() + 1;
+					int de = (int) Math.ceil((double) count / 10);
+					System.out.println(">>>>>>>count = " + count);
+					System.out.println(">>>>>>>de = " + de);
+					for (int j = 0; j < de; j++) {
+			%>
+
+			<a href="board.jsp?pageNumber=<%=j + 1%>"><%=j + 1%></a>
+
+			<%
+				}
+			%>
 		</div>
 	</section>
 

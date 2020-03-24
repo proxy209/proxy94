@@ -4,6 +4,7 @@
 <%
 	request.setCharacterEncoding("utf-8");
 %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -26,6 +27,10 @@
 		if (session.getAttribute("userID") != null) {
 			userID = (String) session.getAttribute("userID");
 		}
+		int bID = 0;
+		if (request.getParameter("bID") != null) {
+			bID = Integer.parseInt(request.getParameter("bID"));
+		}
 
 		if (userID == null) {
 			PrintWriter script = response.getWriter();
@@ -46,7 +51,6 @@
 			script.println("location.href='board.jsp'");
 			script.println("</script>");
 		}
-	
 	%>
 	<nav>
 		<div class="navigation">
@@ -57,7 +61,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -73,7 +77,8 @@
 	</nav>
 	<section>
 		<h3 class="title1">여행일지 쓰기</h3>
-		<form class="content" method="post" action="write.go">
+		<form class="content" method="post" action="write.go"
+			enctype="multipart/form-data">
 			<input type="hidden" value=<%=userID%> class="userID" name="userID">
 			<table class="board">
 				<tr>
@@ -89,7 +94,7 @@
 				</tr>
 				<tr>
 					<td>사진 첨부</td>
-					<td><input type="file"></td>
+					<td><input type="file" name="file"></td>
 				</tr>
 			</table>
 			<div class="writeBtn">

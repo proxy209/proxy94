@@ -27,14 +27,15 @@ nav {
 	background-color: #ffebef;
 }
 
-.navigation ul li {
+.navigation ul li a {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.navigation ul li:hover {
+.navigation ul li a:hover {
 	font-size: 16px;
 	font-weight: bold;
+	color: orange;
 }
 
 .logo img {
@@ -164,3 +165,68 @@ footer {
 	opacity: 0.9;
 	top: 15px;
 }
+
+
+
+
+
+
+.body {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.body h1 {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 40px;
+}
+
+.history {
+  width: 950px;
+  height: 100px;
+  margin-left: 15px;
+}
+
+.contents {
+  width: 100%;
+  height: 700px;
+}
+
+.mission,
+.vision {
+  width: 40%;
+  height: 150px;
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.value {
+  margin-top: 20px;
+  width: 900px;
+  height: auto;
+  position: relative;
+}
+
+.value>h3 {
+  margin-top: 200px;
+  margin-left: 20px;
+}
+
+.value>ul>li {
+  margin-top: 50px;
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin-left: 20px;
+}
+
+.value>ul>li:nth-child(2),
+.value>ul>li:nth-child(4) {
+  margin-left: 200px;
+}
+

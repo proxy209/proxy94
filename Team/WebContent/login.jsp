@@ -49,7 +49,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">

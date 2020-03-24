@@ -21,6 +21,7 @@ public class RepleCommand implements CommandHandler {
 		String bID = request.getParameter("bID");
 		String userID = request.getParameter("userID");
 		String rContent = request.getParameter("rContent");
+		
 		System.out.println("bbsID>>>>>"+bID);
 		System.out.println("userID>>>>>"+userID);
 		System.out.println("repleContent>>>>>"+rContent);

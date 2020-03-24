@@ -23,7 +23,7 @@ public class mailCommand implements CommandHandler {
 
 	@Override
 	public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");	
 		String name = request.getParameter("name");
 		String from = request.getParameter("from");
 		String to = request.getParameter("to");

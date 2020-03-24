@@ -37,7 +37,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -81,44 +81,66 @@
 				</tr>
 			</table>
 		</div>
-
-		<h3 class="title2">연혁</h3>
-		<div class="intro2">
-			<p>Miuccia inherited the company in 1978 by which time sales were
-				up to U.S. $450,000. With Bertelli alongside her as business
-				manager, Miuccia was allowed time to implement her creativity in the
-				company's designs.[4] She would go on to incorporate her ideas into
-				the house of Prada that would change it.[4] She released her first
-				set of backpacks and totes in 1979. They were made out of a tough
-				military spec black nylon that her grandfather had used as coverings
-				for steamer trunks. Initial success was not instant, as they were
-				hard to sell due to the lack of advertising and high prices, but the
-				lines would go on to become her first commercial hit. Next, Miuccia
-				and Bertelli sought out wholesale accounts for the bags in upscale
-				department stores and boutiques worldwide. In 1983, Prada opened a
-				second boutique in the centre of the Galleria Vittorio Emanuele in
-				Milan's shopping heart, on the site of the previous historic "London
-				House" emporium run by Felice Bellini from 1870 to the 1960s,
-				reminiscent of the original shop, but with a sleek and modern
-				contrast to it. The next big release was a nylon tote. That same
-				year, the house of Prada began expansion across continental Europe
-				and the United States by opening locations in prominent shopping
-				districts within Florence, Paris, Madrid, and New York City. A shoe
-				line was also released in 1984. In 1985 Miuccia released the
-				"classic Prada handbag" that became an overnight sensation. Although
-				practical and sturdy, its sleek lines and craftsmanship had a luxury
-				that has become the Prada signature. In 1987 Miuccia and Bertelli
-				married. Prada launched its women's ready-to-wear collection in
-				1989, and the designs came to be known for their dropped waistlines
-				and narrow belts. Prada's popularity increased when the fashion
-				world took notice of its clean lines, opulent fabrics, and basic
-				colors. The logo for the label was not as obvious a design element
-				as those on bags from other prominent luxury brands such as Louis
-				Vuitton. It tried to market its lack of prestigious appeal,
-				including of its apparel, by projecting an image of "anti-status" or
-				"inverse snobbery".</p>
-
-			<p></p>
+		<div class="body">
+			<h1>인사글</h1>
+			<br>
+			<div class="history">
+				<h3>설립 계기</h3>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+				numquam voluptates, possimus corporis labore commodi vero laborum
+				repellat, quisquam odio quidem pariatur soluta praesentium
+				necessitatibus asperiores impedit, et nemo atque!
+			</div>
+			<div class="contents">
+				<div class="mission">
+					<h3>희망 목표</h3>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. A vel
+					tempora, in tenetur possimus quo sunt aut quibusdam dignissimos
+					pariatur temporibus vero libero, excepturi iusto tempore corrupti
+					dolor perspiciatis commodi.
+				</div>
+				<div class="vision">
+					<h3>사회적 목표</h3>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed
+					odio libero quisquam quidem. Tempore, vero! Tenetur provident
+					dolores ad nisi ea ut, eaque dolor at? Animi ipsum illum labore.
+				</div>
+				<br>
+				<!-- 사회적 추구 -->
+				<div class="value">
+					<h3>사회적 가치의 추구</h3>
+					<ul>
+						<li><strong>여행의 정의</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>여행의 목표</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>모험정신</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>도전정신</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -182,7 +204,7 @@
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -229,44 +251,66 @@
 				</tr>
 			</table>
 		</div>
-
-		<h3 class="title2">연혁</h3>
-		<div class="intro2">
-			<p>Miuccia inherited the company in 1978 by which time sales were
-				up to U.S. $450,000. With Bertelli alongside her as business
-				manager, Miuccia was allowed time to implement her creativity in the
-				company's designs.[4] She would go on to incorporate her ideas into
-				the house of Prada that would change it.[4] She released her first
-				set of backpacks and totes in 1979. They were made out of a tough
-				military spec black nylon that her grandfather had used as coverings
-				for steamer trunks. Initial success was not instant, as they were
-				hard to sell due to the lack of advertising and high prices, but the
-				lines would go on to become her first commercial hit. Next, Miuccia
-				and Bertelli sought out wholesale accounts for the bags in upscale
-				department stores and boutiques worldwide. In 1983, Prada opened a
-				second boutique in the centre of the Galleria Vittorio Emanuele in
-				Milan's shopping heart, on the site of the previous historic "London
-				House" emporium run by Felice Bellini from 1870 to the 1960s,
-				reminiscent of the original shop, but with a sleek and modern
-				contrast to it. The next big release was a nylon tote. That same
-				year, the house of Prada began expansion across continental Europe
-				and the United States by opening locations in prominent shopping
-				districts within Florence, Paris, Madrid, and New York City. A shoe
-				line was also released in 1984. In 1985 Miuccia released the
-				"classic Prada handbag" that became an overnight sensation. Although
-				practical and sturdy, its sleek lines and craftsmanship had a luxury
-				that has become the Prada signature. In 1987 Miuccia and Bertelli
-				married. Prada launched its women's ready-to-wear collection in
-				1989, and the designs came to be known for their dropped waistlines
-				and narrow belts. Prada's popularity increased when the fashion
-				world took notice of its clean lines, opulent fabrics, and basic
-				colors. The logo for the label was not as obvious a design element
-				as those on bags from other prominent luxury brands such as Louis
-				Vuitton. It tried to market its lack of prestigious appeal,
-				including of its apparel, by projecting an image of "anti-status" or
-				"inverse snobbery".</p>
-
-			<p></p>
+		<div class="body">
+			<h1>인사글</h1>
+			<br>
+			<div class="history">
+				<h3>설립 계기</h3>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+				numquam voluptates, possimus corporis labore commodi vero laborum
+				repellat, quisquam odio quidem pariatur soluta praesentium
+				necessitatibus asperiores impedit, et nemo atque!
+			</div>
+			<div class="contents">
+				<div class="mission">
+					<h3>희망 목표</h3>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. A vel
+					tempora, in tenetur possimus quo sunt aut quibusdam dignissimos
+					pariatur temporibus vero libero, excepturi iusto tempore corrupti
+					dolor perspiciatis commodi.
+				</div>
+				<div class="vision">
+					<h3>사회적 목표</h3>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed
+					odio libero quisquam quidem. Tempore, vero! Tenetur provident
+					dolores ad nisi ea ut, eaque dolor at? Animi ipsum illum labore.
+				</div>
+				<br>
+				<!-- 사회적 추구 -->
+				<div class="value">
+					<h3>사회적 가치의 추구</h3>
+					<ul>
+						<li><strong>여행의 정의</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>여행의 목표</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>모험정신</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+						<li><strong>도전정신</strong>
+							<ul>
+								<li>Lorem ipsum dolor sit amet consectetur, adipisicing
+									elit. Soluta totam inventore optio labore enim aliquam saepe
+									animi, rerum eligendi tenetur ipsam earum temporibus. Totam
+									eveniet nam consequuntur. Officia, quis veritatis.</li>
+							</ul></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 

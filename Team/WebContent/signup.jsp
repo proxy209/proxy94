@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ page import="java.io.PrintWriter"%>
-<% request.setCharacterEncoding("utf-8"); %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,43 +19,42 @@
 </head>
 <body>
 	<%
-	String error = (String) request.getAttribute("Error");
+		String error = (String) request.getAttribute("Error");
 
-	if (error != null && error.equals("1")) {
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		script.println("alert('회원가입이 완료되었습니다.')");
-		script.println("location.href='main.jsp'");
-		script.println("</script>");
-	}else if (error != null && error.equals("0")) {
+		if (error != null && error.equals("1")) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('회원가입이 완료되었습니다.')");
+			script.println("location.href='main.jsp'");
+			script.println("</script>");
+		} else if (error != null && error.equals("0")) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('입력이 안된사항이 있습니다.')");
-		 	script.println("history.back()");
+			script.println("history.back()");
 			script.println("</script>");
 		} else if (error != null && error.equals("-1")) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('이미 존재하는 아이디 입니다.')");
-		 	script.println("history.back()");
+			script.println("history.back()");
 			script.println("</script>");
 		}
-
 	%>
 	<script>
-$(function(){
-	//비밀번호 확인
-		$('#pw2').blur(function(){
-		   if($('#pw').val() != $('#pw2').val()){
-		    	if($('#pw2').val()!=''){
-			    alert("비밀번호가 일치하지 않습니다.");
-		    	    $('#pw2').val('');
-		          $('#pw2').focus();
-		       } 
-		    }
-		})  	   
-	});
-</script>
+		$(function() {
+			//비밀번호 확인
+			$('#pw2').blur(function() {
+				if ($('#pw').val() != $('#pw2').val()) {
+					if ($('#pw2').val() != '') {
+						alert("비밀번호가 일치하지 않습니다.");
+						$('#pw2').val('');
+						$('#pw2').focus();
+					}
+				}
+			})
+		});
+	</script>
 	<nav>
 		<div class="navigation">
 			<div class="logo">
@@ -63,7 +64,7 @@ $(function(){
 				<li><a href="intro.jsp">소개</a></li>
 				<li><a href="tour.jsp">관광정보</a></li>
 				<li><a href="board.jsp">여행일기</a></li>
-				<li><a href="#">특별혜택</a></li>
+				<li><a href="festival.jsp">축제</a></li>
 				<li><a href="qna.jsp">문의</a></li>
 			</ul>
 			<div class="login">
@@ -123,41 +124,42 @@ $(function(){
 
 
 	<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(37.493160, 126.722691), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+			center : new kakao.maps.LatLng(37.493160, 126.722691), // 지도의 중심좌표
+			level : 3
+		// 지도의 확대 레벨
+		};
 
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-  
-// 마커를 표시할 위치입니다 
-var position =  new kakao.maps.LatLng(37.493160, 126.722691);
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-  position: position,
-  clickable: true // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
-});
+		// 마커를 표시할 위치입니다 
+		var position = new kakao.maps.LatLng(37.493160, 126.722691);
 
-// 아래 코드는 위의 마커를 생성하는 코드에서 clickable: true 와 같이
-// 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
-// marker.setClickable(true);
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position : position,
+			clickable : true
+		// 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
+		});
 
-// 마커를 지도에 표시합니다.
-marker.setMap(map);
+		// 아래 코드는 위의 마커를 생성하는 코드에서 clickable: true 와 같이
+		// 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
+		// marker.setClickable(true);
 
-// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
+		// 마커를 지도에 표시합니다.
+		marker.setMap(map);
 
-// 인포윈도우를 생성합니다
-    
+		// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
 
-// 마커에 클릭이벤트를 등록합니다
-kakao.maps.event.addListener(marker, 'click', function() {
-      // 마커 위에 인포윈도우를 표시합니다
-      infowindow.open(map, marker);  
-});
-</script>
+		// 인포윈도우를 생성합니다
+
+		// 마커에 클릭이벤트를 등록합니다
+		kakao.maps.event.addListener(marker, 'click', function() {
+			// 마커 위에 인포윈도우를 표시합니다
+			infowindow.open(map, marker);
+		});
+	</script>
 
 </body>
 </html>
