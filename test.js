@@ -1,3 +1,5 @@
-const test = () => {
+const cdnTest = () => {
     console.log("test");
 }
+
+cdnTest();
