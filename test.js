@@ -1,5 +1,3 @@
-const test = {
-    textTest: () => {
-        console.log("CDN test");
-    }
+const test = () => {
+    console.log("test");
 }
